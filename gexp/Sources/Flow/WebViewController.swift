@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import WebKit
 
 class WebViewController: UIViewController {
 
     lazy var screen: WebViewScreen = {
         let view = WebViewScreen()
+        view.navigationDelegate = self
         return view
     }()
     
@@ -22,8 +24,19 @@ class WebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadURL()
     }
+    
+    private func loadURL() {
+        guard let url = URL(string: "https://www.hackingwithswift.com/") else { return }
 
+        let urlRequest = URLRequest(url: url)
+        screen.load(urlRequest)
+        screen.allowsBackForwardNavigationGestures = true
+    }
+}
 
+extension WebViewController: WKNavigationDelegate {
+    
 }
 

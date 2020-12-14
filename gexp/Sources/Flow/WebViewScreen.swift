@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
-class WebViewScreen: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+class WebViewScreen: WKWebView {
+    
+    override init(frame: CGRect, configuration: WKWebViewConfiguration) {
+        super.init(frame: frame, configuration: configuration)
         setupView()
     }
     
@@ -20,15 +22,9 @@ class WebViewScreen: UIView {
 }
 
 extension WebViewScreen: ViewCodable {
-    func buildViewHierarchy() {
-        
-    }
+    func buildViewHierarchy() {}
     
-    func setupConstraints() {
+    func setupConstraints() {}
     
-    }
-    
-    func additionalSetup() {
-        backgroundColor = .red
-    }
+    func additionalSetup() {}
 }
