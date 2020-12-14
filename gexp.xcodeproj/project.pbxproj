@@ -69,21 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05B702A92587AF4A00DE1306 /* Util */ = {
+		05B702A92587AF4A00DE1306 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				05B702AA2587AF7000DE1306 /* ViewCodable.swift */,
 			);
-			path = Util;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		05B702AC2587AF7C00DE1306 /* Flow */ = {
+		05B702AC2587AF7C00DE1306 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
 				05E461F42587AD920063DD6F /* WebViewController.swift */,
 				05B702AD2587AFC900DE1306 /* WebViewScreen.swift */,
 			);
-			path = Flow;
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		05E461F72587ADC10063DD6F /* Resources */ = {
@@ -98,8 +98,8 @@
 		05E461F82587ADD20063DD6F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				05B702AC2587AF7C00DE1306 /* Flow */,
-				05B702A92587AF4A00DE1306 /* Util */,
+				05B702AC2587AF7C00DE1306 /* Flows */,
+				05B702A92587AF4A00DE1306 /* Utils */,
 				05E461F32587AD920063DD6F /* AppDelegate.swift */,
 			);
 			path = Sources;
@@ -472,7 +472,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JZ2QTNWLCN;
 				INFOPLIST_FILE = gexp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -482,6 +483,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.dextra.gexp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "GExp Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "gexp/gexp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -495,7 +497,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JZ2QTNWLCN;
 				INFOPLIST_FILE = gexp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -505,6 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.dextra.gexp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "GExp Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "gexp/gexp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
